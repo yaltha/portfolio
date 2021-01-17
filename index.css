@@ -137,14 +137,15 @@ nav {
 
 #portfolios{
     background-color: #303841;
-    padding-top: 50px;
-    height: 100vh;
+    /* padding-top: 50px; */
+    padding: 2em;
+    /* height: 100vh; */
 }
 
 .card-container{
-    margin: 0 auto;
+    /* margin: 0 auto; */
     /* width: 600px; */
-    width: 100vw;
+    /* width: 100vw; */
     display: grid;
     grid-template-columns: repeat(2, 300px);
     gap: 1em;
