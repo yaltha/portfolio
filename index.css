@@ -25,6 +25,7 @@ nav {
 .navbar-left{
     flex:auto;
     padding-left: 50px;
+    justify-content: space-between;
 }
 
 .links{
@@ -64,6 +65,12 @@ nav {
     border-bottom: 2px solid #E2EBF0;
 }
 
+.checkbtn{
+    display: none;
+}
+
+#check { display: none;}
+
 /* HERO */
 
  #hero{
@@ -80,6 +87,7 @@ nav {
     top: 50%;
     left: 170px;
 }
+
 
 .container h1{
     font-family: "Montserrat";
@@ -126,7 +134,7 @@ nav {
 /* ABOUT ME */
 
 #about-me{
-    padding-top: 50px;
+    padding-top: 3em;
     /* height: 50vh; */
     background-color: #eeeeee;
 }
@@ -138,7 +146,7 @@ nav {
 
 .about-description p{
     line-height: 2em;
-    padding:  3em 1em;
+    padding:  0em 1em 3em;
 }
 
 /* SKILLS */
@@ -280,4 +288,134 @@ footer h5{
     background-color: #eee;
     border-radius: .2em;
     box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 780px){
+    nav{
+        display: flex;
+        align-items: center;
+    }
+    .checkbtn{
+        display: block;
+        cursor: pointer;
+        margin: 1em;
+    }
+    .checkbtn svg{
+        padding: .2em;
+        border-radius: 50%;
+        background-color: #eee;
+        width: 2.5em;
+        height: 2.5em;
+    }
+    
+    .navbar-right{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 70px;
+        left: -100%;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .links{
+        padding: 0;
+        margin: 1em 0;
+        font-size: large;
+    }
+
+    .active, .links:hover{
+        border: none;
+
+    }
+    
+    .portfolio{
+        padding: .5em 1.5em;
+    }
+
+    #check:checked ~ .navbar-right{
+        left: 0;
+    }
+
+    /* ----------- */
+    .container{
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* ------ */
+    .skills-container{
+        width: 60vw;
+        margin: 0 auto;
+    }
+    
+    .skill-cards{
+        margin: 5px 0;
+        padding: 10px;
+        color: #eee;
+        height: 100px;
+        background-color: #eee;
+        border: none;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+    }
+    
+    .skill-cards p{
+        color: #303841;
+        margin: 10px 0;
+    }
+    
+    .top {
+        background-color: #1E3C72;
+        height: 10px;
+        border-radius: 5px;
+    }
+    .bottom{
+        background-color: #C4C4C4;
+        height: 10px;
+        width: 55vw;
+        border-radius: 5px;
+    }
+    
+    .skill-cards:first-child .top{
+        width: 49vw;
+    }
+    .skill-cards:nth-child(2) .top{
+        width: 51vw;
+    }
+    .skill-cards:nth-child(3) .top{
+        width: 45vw;
+    }
+    .skill-cards:nth-child(4) .top{
+        width: 40vw;
+    }
+    .skill-cards:nth-child(5) .top{
+        width: 35vw;
+    }
+    .skill-cards:last-child .top{
+        width: 20vw;
+    }
+    /* ---- */
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+   
+    .contacts img{
+        margin-bottom: .5em;
+    }
+
+    .link-contact {
+        margin-bottom: 1.5em;
+    }
 }
