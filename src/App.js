@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+import Navbar from './components/Navbar.jsx'
+import Hero from './components/Hero.jsx'
+import About from './components/About.jsx'
+import Porflolios from './components/Portfolios.jsx'
+import Skills from './components/Skills.jsx'
+import Contact from './components/Contact.jsx'
+import Footer from './components/Footer.jsx'
 
-function App() {
+const Wrapper = styled.div`
+  padding: 0;
+  margin: 0;
+  border-sizing: border-box;
+  font-family: 'Montserrat';
+`
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Navbar/>
+      <Hero/>
+      <About/>
+      <Porflolios/>
+      <Skills/>
+      <Contact/>
+      <Footer/>
+    </Wrapper>
   );
 }
 
