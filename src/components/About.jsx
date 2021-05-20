@@ -1,25 +1,35 @@
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 const Wrapper = styled.div`
-  width: 80%;
-  margin: 1em auto;
-  background-color: #f5fffa;
-  padding: 2em;
-  border-radius: 5px;
-  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.26);
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* width: 80%; */
+  /* margin: 4em auto; */
+  /* background-color: #f5fffa; */
+  /* background-color: #fafafa; */
+  /* padding: 2em; */
+  /* border-radius: 5px; */
+
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #1f4743 100%);
 `;
-const Title = styled.h3`
-  text-align: center;
+const Title = styled.h1`
+  /* text-align: center; */
   margin-bottom: 1em;
+  color: white;
+  font-size: 4em;
 `;
 
 const Desc = styled.p`
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 60%;
+  /* margin: 0 auto; */
+  color: white;
+  padding: 3em 0;
 `;
 
 const About = () => {
@@ -27,10 +37,13 @@ const About = () => {
     <Wrapper>
       <Title>About</Title>
       <Desc>
-        Hello, my name is Yaltha Rullist. Welcome to my portfolio website. In
-        summary about me, I have an interest in UI/UX design. I constantly and
-        continuously improving to be a better designer. Chhers!!!
+        Hello, my name is Yaltha Rullist. Welcome to my portfolio website. I am
+        interested in developing and building mobile application with React
+        Native.
       </Desc>
+      <Link className="link" to="/">
+        Home
+      </Link>
     </Wrapper>
   );
 };
