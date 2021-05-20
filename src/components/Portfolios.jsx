@@ -24,14 +24,46 @@ const Title = styled.h1`
   font-size: 4em;
 `;
 
-const PortfoliosContainer = styled.div``;
+const PortfoliosContainer = styled.div`
+  margin: 2em 0;
+  display: flex;
+  /* justify-content: space-around; */
+  /* align-items:; */
+`;
+
+const PortfolioWrapper = styled.div`
+  text-align: center;
+  color: #f5fffa;
+`;
+const PortfolionImg = styled.img`
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 0 1em;
+`;
 
 const Portfolios = () => {
   return (
     <Wrapper>
       <Title>Portfolios</Title>
       <PortfoliosContainer>
-        <Card.Image src={"/porfolios/importTax.png"} alt="portfolios" />
+        {/* <Card.Image
+          src={require("/portfolios/bookStoreApp.jpg")}
+          alt="portfolios"
+        /> */}
+        <PortfolioWrapper>
+          <PortfolionImg src={"/portfolios/bookStoreApp.jpg"} />
+          <h3>Book Store App</h3>
+        </PortfolioWrapper>
+        <PortfolioWrapper>
+          <PortfolionImg src={"/portfolios/importTax.jpg"} />
+          <h3>Import Tax Calculator App</h3>
+        </PortfolioWrapper>
+        <PortfolioWrapper>
+          <PortfolionImg src={"/portfolios/rentCar.jpg"} />
+          <h3>Rent Car App</h3>
+        </PortfolioWrapper>
       </PortfoliosContainer>
       <Link className="link" to="/">
         Home
