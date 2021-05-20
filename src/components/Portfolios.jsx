@@ -41,6 +41,9 @@ const PortfolionImg = styled.img`
   border-radius: 10px;
   object-fit: cover;
   margin: 0 1em;
+  box-shadow: 4px 0px 21px -5px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 4px 0px 21px -5px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 4px 0px 21px -5px rgba(0, 0, 0, 0.39);
 `;
 
 const Portfolios = () => {
