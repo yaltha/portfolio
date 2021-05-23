@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { device } from "./devices";
 
 const Wrapper = styled.div`
   display: flex;
@@ -14,12 +15,17 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   color: white;
   font-size: 4em;
+
+  @media ${device.mobileS} {
+    font-size: 3em;
+  }
 `;
 
 const Desc = styled.p`
+  max-width: 60%;
   color: white;
-  font-size: 1em;
   padding: 3em 0;
+  line-height: 2em;
 `;
 
 const ContactContainer = styled.div`
@@ -44,6 +50,7 @@ const Alink = styled.a`
   justify-content: center;
   align-items: center;
 `;
+
 const Contact = () => {
   return (
     <Wrapper>

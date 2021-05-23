@@ -2,13 +2,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 // import { Card } from "./Card";
+import { device } from "./devices";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   /* width: 80%; */
   /* margin: 4em auto; */
   /* background-color: #f5fffa; */
@@ -22,19 +23,31 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   color: white;
   font-size: 4em;
+
+  @media ${device.mobileS} {
+    font-size: 3em;
+    margin-top: 1em;
+  }
 `;
 
 const PortfoliosContainer = styled.div`
   margin: 2em 0;
   display: flex;
-  /* justify-content: space-around; */
-  /* align-items:; */
+
+  @media ${device.mobileS} {
+    flex-direction: column;
+  }
 `;
 
 const PortfolioWrapper = styled.div`
   text-align: center;
   color: #f5fffa;
+
+  @media ${device.mobileS} {
+    margin-bottom: 2em;
+  }
 `;
+
 const PortfolionImg = styled.img`
   width: 300px;
   height: 200px;
@@ -44,6 +57,11 @@ const PortfolionImg = styled.img`
   box-shadow: 4px 0px 21px -5px rgba(0, 0, 0, 0.39);
   -webkit-box-shadow: 4px 0px 21px -5px rgba(0, 0, 0, 0.39);
   -moz-box-shadow: 4px 0px 21px -5px rgba(0, 0, 0, 0.39);
+
+  @media ${device.mobileS} {
+    width: 250px;
+    height: 150px;
+  }
 `;
 
 const Portfolios = () => {

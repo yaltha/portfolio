@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
 import { Link } from "react-router-dom";
+import { device } from "./devices";
 
 const Wrapper = styled.section`
   height: 100vh;
@@ -21,6 +21,9 @@ const Title = styled.h1`
   color: #fff;
   font-weight: bold;
   font-size: 4em;
+  @media ${device.mobileS} {
+    font-size: 3em;
+  }
 `;
 
 const Text = styled.p`
@@ -29,18 +32,10 @@ const Text = styled.p`
   color: #c4c4c4;
   /* padding: 1em; */
   line-height: 1em;
-`;
-const Button = styled.div`
-  padding: 0.5em 1em;
-  margin: 1em;
-  border-radius: 3px;
-  border: none;
-  background-color: #d72323;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  text-transform: none;
+
+  @media ${device.mobileS} {
+    font-size: 20px;
+  }
 `;
 
 const ProfilePicture = styled.img`
@@ -54,6 +49,10 @@ const LinkContainer = styled.div`
   margin: 2em 0;
   display: flex;
   flex-direction: row;
+
+  @media ${device.mobileS} {
+    flex-direction: column;
+  }
 `;
 
 const Hero = () => {

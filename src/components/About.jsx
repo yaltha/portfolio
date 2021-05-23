@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
+import { device } from "./devices";
 
 const Wrapper = styled.div`
   display: flex;
@@ -23,6 +24,11 @@ const Title = styled.h1`
   margin-bottom: 1em;
   color: white;
   font-size: 4em;
+
+  @media ${device.mobileS} {
+    margin-bottom: 0.5em;
+    font-size: 3em;
+  }
 `;
 
 const Desc = styled.p`
@@ -30,6 +36,7 @@ const Desc = styled.p`
   /* margin: 0 auto; */
   color: white;
   padding: 3em 0;
+  line-height: 2em;
 `;
 
 const About = () => {
