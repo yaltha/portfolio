@@ -7,7 +7,6 @@ import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
-import { device } from "./components/devices";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -16,28 +15,6 @@ const Wrapper = styled.div`
   margin: 0;
   /* border-sizing: border-box; */
   font-family: "Montserrat";
-
-  @media ${device.mobileS} {
-    max-width: 320px;
-  }
-  @media ${device.mobileM} {
-    max-width: 375px;
-  }
-  @media ${device.mobileL} {
-    max-width: 425px;
-  }
-  @media ${device.tablet} {
-    max-width: 768px;
-  }
-  @media ${device.laptop} {
-    max-width: 1024px;
-  }
-  @media ${device.laptopL} {
-    max-width: 1440px;
-  }
-  @media ${device.desktop} {
-    max-width: 2560px;
-  }
 `;
 
 const App = () => {

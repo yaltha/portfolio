@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
-import { device } from "./devices";
+import { deviceSize } from "./devices";
 
 const Wrapper = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ const Title = styled.h1`
   color: white;
   font-size: 4em;
 
-  @media ${device.mobileS} {
+  @media only screen and (max-width: ${deviceSize.mobileS}px) {
     margin-bottom: 0.5em;
     font-size: 3em;
   }

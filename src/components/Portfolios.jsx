@@ -1,30 +1,26 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-// import { Card } from "./Card";
-import { device } from "./devices";
+import { deviceSize } from "./devices";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
-  /* width: 80%; */
-  /* margin: 4em auto; */
-  /* background-color: #f5fffa; */
-  /* padding: 2em; */
-  /* border-radius: 5px; */
-
   background-color: #0093e9;
   background-image: linear-gradient(160deg, #0093e9 0%, #1f4743 100%);
+
+  @media only screen and (min-width: ${deviceSize.laptop}px) {
+    height: 100vh;
+  }
 `;
 
 const Title = styled.h1`
   color: white;
   font-size: 4em;
 
-  @media ${device.mobileS} {
+  @media only screen and (max-width: ${deviceSize.laptop}px) {
     font-size: 3em;
     margin-top: 1em;
   }
@@ -34,7 +30,7 @@ const PortfoliosContainer = styled.div`
   margin: 2em 0;
   display: flex;
 
-  @media ${device.mobileS} {
+  @media only screen and (max-width: ${deviceSize.laptop}px) {
     flex-direction: column;
   }
 `;
@@ -43,7 +39,7 @@ const PortfolioWrapper = styled.div`
   text-align: center;
   color: #f5fffa;
 
-  @media ${device.mobileS} {
+  @media only screen and (max-width: ${deviceSize.laptop}px) {
     margin-bottom: 2em;
   }
 `;
@@ -58,7 +54,7 @@ const PortfolionImg = styled.img`
   -webkit-box-shadow: 4px 0px 21px -5px rgba(0, 0, 0, 0.39);
   -moz-box-shadow: 4px 0px 21px -5px rgba(0, 0, 0, 0.39);
 
-  @media ${device.mobileS} {
+  @media only screen and (max-width: ${deviceSize.mobileS}px) {
     width: 250px;
     height: 150px;
   }
