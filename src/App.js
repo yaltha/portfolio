@@ -6,7 +6,7 @@ import Porflolios from "./components/Portfolios.jsx";
 import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
-
+import TechStacks from "./components/TechStacks.jsx";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -80,6 +80,9 @@ const App = () => {
             </Route>
             <Route path="/contact">
               <Contact />
+            </Route>
+            <Route path="/tech-stacks">
+              <TechStacks />
             </Route>
           </Switch>
         </div>

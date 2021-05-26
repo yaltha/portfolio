@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import { deviceSize } from "./devices";
 
 const Wrapper = styled.section`
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #0093e9;
   background-image: linear-gradient(160deg, #0093e9 0%, #1f4743 100%);
+  @media only screen and (min-width: ${deviceSize.tablet}px) {
+    height: 100vh;
+  }
 `;
 
 const Container = styled.div`
@@ -71,6 +74,9 @@ const Hero = () => {
           </Link>
           <Link className="link" to="/contact">
             Contact
+          </Link>
+          <Link className="link" to="/tech-stacks">
+            Tech Stacks
           </Link>
         </LinkContainer>
       </Container>
